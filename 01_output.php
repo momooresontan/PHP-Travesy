@@ -1,6 +1,9 @@
 <?php
     echo "Hell12345oewt20asdfghjkj";
-
+    print_r([1,2,4]);
+    var_dump("MoMo");
+    var_export(8);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +14,7 @@
 </head>
 <body>
     <h1>
-    <?php echo "Hello"; ?>
+    <?"Hello" ?>
     </h1>
 </body>
 </html>
