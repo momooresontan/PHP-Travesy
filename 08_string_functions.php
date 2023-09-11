@@ -18,4 +18,7 @@
     }
     $string2 = "<script>alert(1)</script>";
     echo htmlspecialchars($string2) . "<br>";
+    printf("%s likes to %s", "MoMo", "code");
+    printf("1+1 =  %f", 1+1);
+
 ?>
