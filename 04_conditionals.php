@@ -14,14 +14,35 @@
     // else{
     //     echo "Good evening";
     // }
-    $posts = [];
+    $posts = ["First Post"];
     // if(!empty($posts)){
     //     echo "There are posts";
     // }else{
     //     echo "No posts";
     // }
     //Tenary operator
-    echo !empty($posts) ? $posts[0] : "No posts";
+    // echo !empty($posts) ? $posts[0] : "No posts";
+    // $firstPost =  !empty($posts) ? $posts[0] : "No posts";
+    // $firstPost =  !empty($posts) ? $posts[0] : null;
+    // $firstPost = !empty($posts) ? $posts[0] ?? null;
+    // echo $firstPost;
+
+    $favColor = "red";
+    switch($favColor){
+        case "red": 
+            echo "Your favourite colour is RED";
+            break;
+        case "blue":
+            echo "Your favourite colour is BLUE";
+            break;
+        
+        case "green":
+            echo "Your favourite colour is GREEN";
+            break;
+        
+        
+    }
+
 
 
 ?>
