@@ -43,5 +43,6 @@
     $lessThan10 = array_filter($numbers, fn($number) => $number <= 10);
     // print_r($lessThan10);
     $sum = array_reduce($numbers, fn($carry, $number) => $carry + $number);
+    var_dump($sum);
 
 ?>
