@@ -27,7 +27,7 @@
     // $firstPost = !empty($posts) ? $posts[0] ?? null;
     // echo $firstPost;
 
-    $favColor = "red";
+    $favColor = "yellow";
     switch($favColor){
         case "red": 
             echo "Your favourite colour is RED";
@@ -39,6 +39,8 @@
         case "green":
             echo "Your favourite colour is GREEN";
             break;
+        default:
+        echo "Your favourite colour is $favColor";
         
         
     }
