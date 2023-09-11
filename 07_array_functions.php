@@ -25,11 +25,20 @@
     $arr2 = [4, 5, 6];
     $arr3 = array_merge($arr1, $arr2);
     $arr4 = [...$arr1, ...$arr2];
-
-    print_r($arr4);
-
-
-
-    
+    // print_r($arr4);
+    $a = ["green", "red", "yellow"];
+    $b = ["avocado", "apple", "banana"];
+    $c = array_combine($a, $b);
+    // print_r($c);
+    $keys = array_keys($c);
+    // print_r($keys);
+    $flipped = array_flip($c);
+    // print_r($flipped);
+    $numbers = range(1, 20);
+    // print_r($numbers);
+    $new_numbers = array_map(function($number) {
+        return "Number: $number";
+    }, $numbers);
+    print_r($new_numbers);
 
 ?>
