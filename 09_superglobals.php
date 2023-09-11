@@ -7,4 +7,6 @@
     // $_ENV;
     // $_FILES;
     // $_REQUEST;
+
+    var_dump($_SERVER);
 ?>
