@@ -6,7 +6,7 @@
     <title>PHP Tutorial</title>
 </head>
 <body>
-    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="GET">
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
     <div>
         <label for="name">Name: </label>
         <input type="text" name="name">
@@ -24,6 +24,8 @@
 <a href="<?php echo $_SERVER["PHP_SELF"]; ?>?name=MoMo&age=22">Click</a>
 
 <?php 
-    echo $_GET["name"];
-    echo $_GET["age"];
+    if(isset($_POST["submit"])){
+        echo $_POST["name"];
+        echo $_POST["age"];
+    }
 ?>
