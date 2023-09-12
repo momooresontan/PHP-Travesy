@@ -5,7 +5,7 @@
        $password = $_POST["password"];
        if($username == "MoMo" && $password == "password"){
         $_SESSION["username"] = $username;
-        header("Location: /PHPBrad/extras/dashboard.php");
+        header("Location: /extras/dashboard.php");
        } else{
         echo "Incorrect username or password";
        }
