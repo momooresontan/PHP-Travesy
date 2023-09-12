@@ -1,20 +1,25 @@
 <?php 
+    session_start();
     if(isset($_POST["submit"])){
-        // $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
-        // $age = filter_input(INPUT_POST, "age", FILTER_SANITIZE_SPECIAL_CHARS);
-        $name = filter_var($_POST["name"], FILTER_SANITIZE_SPECIAL_CHARS);
-        echo $name;
+        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
+       $password = $_POST["password"];
+       if($username == "MoMo" && $password == "password"){
+        $_SESSION["username"] = $username;
+        header("Location: /PHPBrad/extras/dashboard.php");
+       } else{
+        echo "Incorrect username or password";
+       }
     }
 ?>
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
     <div>
-        <label for="name">Username: </label>
+        <label for="username">Username: </label>
         <input type="text" name="username">
     </div>
     <div>
-        <label for="age">Password: </label>
-        <input type="text" name="password">
+        <label for="password">Password: </label>
+        <input type="password" name="password">
     </div>
     <input type="submit" value="Submit" name="submit">
 </form>
