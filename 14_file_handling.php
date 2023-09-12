@@ -9,5 +9,8 @@
         echo $contents;
     } else{
         $handle = fopen($file, "w");
+        $contents = "MoMo" . PHP_EOL . "Murray" . PHP_EOL . "Sammy";
+        fwrite($handle, $contents);
+        fclose($handle);
     }
 ?>
