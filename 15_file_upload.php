@@ -8,11 +8,21 @@
             $file_size = $_FILES["upload"]["size"];
             $file_tmp = $_FILES["upload"]["tmp_name"];
             $target_dir = "uploads/$file_name";
-
             //Get file ext
             $file_ext = explode(".", $file_name);
             $file_ext = strtolower(end($file_ext));
-            echo $file_ext;
+            //Validate file ext 
+            if(in_array($file_ext, $allowed_ext)){
+                if($file_size <= 1000000){
+                    move_uploaded_file($file_tmp, $target_dir);
+                    $message =  '<p style="color: green">Image file uploaded</p>';
+                }else{
+                    $message =  '<p style="color: red">File too large</p>';
+                }
+            }else{
+                $message =  '<p style="color: red">Invaild image type</p>'; 
+            }
+
         } else{
             $message =  '<p style="color: red">Please choose a file</p>';
         }
