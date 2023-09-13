@@ -6,9 +6,18 @@
         return 1/$x;
     }
     try{
-        echo inverse(10);
+        echo inverse(7);
         echo inverse(0);
     }catch(Exception $e){
-
+        echo "Caught Exception" . $e->getMessage() . " <br>";
+    }finally{
+        echo "First finally";
+    }
+    try{
+        echo inverse(0);
+    }catch(Exception $e){
+        echo "Caught Exception" . $e->getMessage() . " <br>";
+    }finally{
+        echo "Second finally";
     }
 ?>
