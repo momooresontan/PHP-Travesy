@@ -24,16 +24,21 @@
     //Instanciate User object
     $user1 = new User("MoMo", "momo@test.io", "password");
     $user2 = new User("Murray", "murray@test.io", "password");
-    echo $user1->email;
-    echo $user2->email;
+    // echo $user1->email;
+    // echo $user2->email;
     //Inheritance
     class Employee extends User {
-        public function __construct($name, $email ,$password, $title )
-        {
+        public $title;
+        public function __construct($name, $email ,$password, $title){
             parent::__construct($name, $email, $password);
             $this->title = $title; 
         }
+        public function get_title(){
+            return $this->title;
+        }
     }
+    $employee1 = new Employee("Kingmo", "kingmo@test.io", "password", "King");
+    echo $employee1->get_title();
 
 
 ?>
