@@ -22,9 +22,18 @@
         }
     }
     //Instanciate User object
-    $user1 = new User();
-    $user2 = new User();
-    $user1-> set_name("MoMo");
-    $user2-> set_name("Murray");
+    $user1 = new User("MoMo", "momo@test.io", "password");
+    $user2 = new User("Murray", "murray@test.io", "password");
+    echo $user1->email;
+    echo $user2->email;
+    //Inheritance
+    class Employee extends User {
+        public function __construct($name, $email ,$password, $title )
+        {
+            parent::__construct($name, $email, $password);
+            $this->title = $title; 
+        }
+    }
+
 
 ?>
