@@ -4,15 +4,27 @@
         public $name;
         public $email;
         public $password;
-        //Method is a function that belong to a class
-        function set_name($name){
-            $this->name;
+        //A constructor is a function or method that runs when an object is created
+        public function __construct($name, $email, $password){
+            $this->name = $name;
+            $this->email = $email;
+            $this->password = $password;
         }
 
+        //Method is a function that belong to a class
+        //Setter
+        function set_name($name){
+            $this->name = $name;
+        }
+        //Getter
+        function get_name(){
+            return $this->name;
+        }
     }
     //Instanciate User object
     $user1 = new User();
-    $user1-> name = "MoMo";
+    $user2 = new User();
+    $user1-> set_name("MoMo");
+    $user2-> set_name("Murray");
 
-    var_dump($user1);
 ?>
