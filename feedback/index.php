@@ -1,6 +1,14 @@
 <?php 
   include 'inc/header.php';
 ?>
+<?php 
+  $name = $email = $body = "";
+  $nameErr = $emailErr = $bodyErr = "";
+  //Form submit
+  if(isset($_POST["submit"])){
+    
+  }
+?>
         <img src="/PHPBrad/feedback/img/logo.png" class="w-25 mb-3" alt="" />
         <h2>Feedback</h2>
         <p class="lead text-center">Leave feedback for Traversy Media</p>
