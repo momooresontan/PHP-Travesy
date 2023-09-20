@@ -34,11 +34,14 @@
             <label for="name" class="form-label">Name</label>
             <input
               type="text"
-              class="form-control"
+              class="form-control is-invalid"
               id="name"
               name="name"
               placeholder="Enter your name"
             />
+            <div class="invalid-feedback">
+              <?php echo $nameErr;?>
+            </div>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
