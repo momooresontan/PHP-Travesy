@@ -39,6 +39,7 @@
     }
     $employee1 = new Employee("Kingmo", "kingmo@test.io", "password", "King");
     echo $employee1->get_title();
+    echo $employee1->get_name();
 
 
 ?>
